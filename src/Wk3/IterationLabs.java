@@ -6,6 +6,7 @@
 
 package Wk3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class IterationLabs {
@@ -25,7 +26,7 @@ public class IterationLabs {
 		// doWhileLoop3();
 		// forLoop1();
 		// forLoop2();
-		//forLoop3();
+		// forLoop3();
 		histogram();
 	}
 
@@ -40,15 +41,20 @@ public class IterationLabs {
 
 		i = 1;
 		total = 0;
-		System.out.print("Enter increment amount? ");
-		int incrementValue = sc.nextInt();
 
-		while (i < 6) {
-			System.out.println("Loop2:i == " + i);
-			total += i;
-			i += incrementValue;
+		try {
+			System.out.print("Enter increment amount? ");
+			int incrementValue = sc.nextInt();
+
+			while (i < 6) {
+				System.out.println("Loop2:i == " + i);
+				total += i;
+				i += incrementValue;
+			}
+			System.out.println("Loop2: Total == " + total);
+		} catch (Exception e) {
+			System.out.println("Caught exception");
 		}
-		System.out.println("Loop2: Total == " + total);
 	}
 
 	public static void whileLoop2() {
@@ -59,16 +65,20 @@ public class IterationLabs {
 		}
 		System.out.println("Total == " + total);
 
-		System.out.print("Enter increment amount? ");
-		int decrementValue = sc.nextInt();
-		total = 0;
-		i = 5;
-		while (i > 0) {
-			System.out.println("i == " + i);
-			total += i;
-			i -= decrementValue;
+		try {
+			System.out.print("Enter increment amount? ");
+			int decrementValue = sc.nextInt();
+			total = 0;
+			i = 5;
+			while (i >= 0) {
+				System.out.println("i == " + i);
+				total += i;
+				i -= decrementValue;
+			}
+			System.out.println("Total == " + total);
+		} catch (Exception e) {
+			System.out.println("Caught exception");
 		}
-		System.out.println("Total == " + total);
 	}
 
 	public static void whileLoop3() {
@@ -82,17 +92,21 @@ public class IterationLabs {
 		}
 		System.out.println("Sum is " + total);
 
-		total = 0;
-		while (true) {
-			System.out.print("Enter a number (-1 to exit) --> ");
-			number = sc.nextInt();
-			if (number < 0) {
-				break;
-			} else {
-				total += number;
+		try {
+			total = 0;
+			while (true) {
+				System.out.print("Enter a number (-1 to exit) --> ");
+				number = sc.nextInt();
+				if (number < 0) {
+					break;
+				} else {
+					total += number;
+				}
 			}
+			System.out.println("Sum is " + total);
+		} catch (Exception e) {
+			System.out.println("Caught exception");
 		}
-		System.out.println("Sum is " + total);
 	}
 
 	public static void doWhileLoop1() {
@@ -107,14 +121,19 @@ public class IterationLabs {
 
 		i = 1;
 		total = 0;
-		System.out.print("Enter increment amount? ");
-		int incrementValue = sc.nextInt();
-		do {
-			System.out.println("Loop2:i == " + i);
-			total += i;
-			i += incrementValue;
-		} while (i < 6);
-		System.out.println("Loop2: Total == " + total);
+
+		try {
+			System.out.print("Enter increment amount? ");
+			int incrementValue = sc.nextInt();
+			do {
+				System.out.println("Loop2:i == " + i);
+				total += i;
+				i += incrementValue;
+			} while (i < 6);
+			System.out.println("Loop2: Total == " + total);
+		} catch (Exception e) {
+			System.out.println("Caught exception");
+		}
 	}
 
 	public static void doWhileLoop2() {
@@ -125,16 +144,21 @@ public class IterationLabs {
 		} while (i > 0);
 		System.out.println("Total == " + total);
 
-		System.out.print("Enter increment amount? ");
-		int decrementValue = sc.nextInt();
-		total = 0;
-		i = 5;
-		do {
-			System.out.println("i == " + i);
-			total += i;
-			i -= decrementValue;
-		} while (i > 0);
-		System.out.println("Total == " + total);
+		try {
+			System.out.print("Enter increment amount? ");
+			int decrementValue = sc.nextInt();
+			total = 0;
+			i = 5;
+
+			do {
+				System.out.println("i == " + i);
+				total += i;
+				i -= decrementValue;
+			} while (i > 0);
+			System.out.println("Total == " + total);
+		} catch (Exception e) {
+			System.out.println("Caught exception");
+		}
 	}
 
 	public static void doWhileLoop3() {
@@ -149,16 +173,21 @@ public class IterationLabs {
 		System.out.println("Sum is " + total);
 
 		total = 0;
-		do {
-			System.out.print("Enter a number (-1 to exit) --> ");
-			number = sc.nextInt();
-			if (number < 0) {
-				break;
-			} else {
-				total += number;
-			}
-		} while (true);
-		System.out.println("Sum is " + total);
+
+		try {
+			do {
+				System.out.print("Enter a number (-1 to exit) --> ");
+				number = sc.nextInt();
+				if (number < 0) {
+					break;
+				} else {
+					total += number;
+				}
+			} while (true);
+			System.out.println("Sum is " + total);
+		} catch (Exception e) {
+			System.out.println("Caught exception");
+		}
 	}
 
 	public static void forLoop1() {
@@ -167,6 +196,7 @@ public class IterationLabs {
 			total += i;
 		}
 		System.out.println("Total is " + total);
+
 		total = 0;
 		for (int i = 5; i <= 20; i += 5) {
 			total += i;
@@ -190,43 +220,52 @@ public class IterationLabs {
 
 	public static void forLoop3() {
 		int total = 0;
-		for (;;) {
-			System.out.print("Enter a number (-1 to exit) --> ");
-			int number = sc.nextInt();
-			if (number < 0) {
-				break;
-			} else {
-				total += number;
+		
+		try {
+			for (;;) {
+				System.out.print("Enter a number (-1 to exit) --> ");
+				int number = sc.nextInt();
+				if (number < 0) {
+					break;
+				} else {
+					total += number;
+				}
 			}
+			System.out.println("Total is " + total);
+		} catch (InputMismatchException e) {
+			System.out.println("Input Exception" + e);
 		}
-		System.out.println("Total is " + total);
 	}
-	
+
 	public static void histogram() {
-		System.out.print("Enter number of rows --> ");
-		int rows = sc.nextInt();
-		System.out.print("Enter number of columns --> ");
-		int cols = sc.nextInt();
-		System.out.println("Using for loops:");
-		
-		for (int i = 0; i < rows; i++) {
-			for (int j = 0; j < cols; j++) {
-				System.out.print("*");
+		try {
+			System.out.print("Enter number of rows --> ");
+			int rows = sc.nextInt();
+			System.out.print("Enter number of columns --> ");
+			int cols = sc.nextInt();
+			System.out.println("Using for loops:");
+
+			for (int i = 0; i < rows; i++) {
+				for (int j = 0; j < cols; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
 			}
-			System.out.println();
-		}
-		
-		System.out.println("\nUsing while loops:");
-		int i = 0, j = 0;
-		while (i < rows) {
-			while (j < cols) {
-				System.out.print("*");
-				j++;
+
+			System.out.println("\nUsing while loops:");
+			int i = 0, j = 0;
+			while (i < rows) {
+				while (j < cols) {
+					System.out.print("*");
+					j++;
+				}
+
+				System.out.println();
+				j = 0;
+				i++;
 			}
-			
-			System.out.println();
-			j=0;
-			i++;
+		} catch (Exception e) {
+			System.out.println("Caught exception");
 		}
 	}
 }

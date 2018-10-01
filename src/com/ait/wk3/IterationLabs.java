@@ -4,7 +4,7 @@
  * 25/09/2018
  */
 
-package Wk3;
+package com.ait.wk3;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

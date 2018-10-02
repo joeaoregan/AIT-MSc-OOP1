@@ -40,6 +40,8 @@ public class TestScoreApp {
 		String message = "\nScore count:  " + scoreCount + "\nScore total:  " + scoreTotal + "\nAverage score: "
 				+ averageScore + "\n";
 		System.out.println(message);
+		
+		sc.close();
 	}
 
 }

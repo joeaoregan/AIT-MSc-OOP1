@@ -25,6 +25,7 @@ public class whileLoop {
 			choice = sc.next();
 			System.out.println();
 		}
+		//sc.close();
 	}
 
 }

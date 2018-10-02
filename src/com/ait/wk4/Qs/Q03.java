@@ -1,6 +1,6 @@
 package com.ait.wk4.Qs;
 
-public class Q3 {
+public class Q03 {
 
 	public static void main(String[] args) {
 		int i1 = 1, i2 = 2, i3 = 3;

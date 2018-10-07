@@ -65,8 +65,6 @@ public class ExWk1 {
 
 	static String getSwimmersCountry(String name) {
 		System.out.println("Please enter " + name + " country: ");
-		// String country = sc.nextLine();
-		// return country;
 		return sc.next();
 	}
 }

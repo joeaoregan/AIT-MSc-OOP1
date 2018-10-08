@@ -4,6 +4,7 @@
  * 03/10/2018
  * Q16/28
  */
+/*
 package com.ait.wk4.Qs;
 
 public class Q16 {
@@ -22,3 +23,4 @@ public class Q16 {
 	} 
 
 }
+*/

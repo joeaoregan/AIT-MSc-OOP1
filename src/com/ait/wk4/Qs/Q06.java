@@ -1,3 +1,4 @@
+/*
 package com.ait.wk4.Qs;
 
 public class Q06 {
@@ -10,3 +11,4 @@ public class Q06 {
 	}
 
 }
+*/

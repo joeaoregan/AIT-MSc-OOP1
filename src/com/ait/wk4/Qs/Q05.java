@@ -1,3 +1,4 @@
+/*
 package com.ait.wk4.Qs;
 
 public class Q05 {
@@ -7,7 +8,8 @@ public class Q05 {
 		char c = 320;
 		float f = 320;
 		double d = 320;
-		byte b = 320;	// illegal
+		byte b = 320;	// illegal - size of byte -128 to 127
 	}
 
 }
+*/

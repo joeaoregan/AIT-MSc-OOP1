@@ -58,7 +58,8 @@ public class TestClass {
 //		System.out.println(((A)c).m);	// 1
 
 		A a = new C();
-//		a.nsm();						// C::nsm()
+//		a.nsm();						// C::nsm() - object type is C
+//		a.sm();							// A::sm()
 		
 //		a = new B();
 //		a.nsm();						// B::nsm()
@@ -70,9 +71,15 @@ public class TestClass {
 //		((A)a).nsm();					// C::nsm() - still gives C even though it is cast. non static / instance methods. Objects matter, not the reference
 		
 		A aref = new C();
-		System.out.println(aref.m);		// 1
-		aref.nsm();						// C::nsm()
-		aref.sm();						// A::sm()
+		System.out.println(aref.m);		// 1 - type of reference matters
+		aref.nsm();						// C::nsm() - non-static method
+		aref.sm();						// A::sm() - static method
+		// overriding basically supports late-binding
+		// depends on the objects types
+		// Its for instance methods only, non-static methods
+		
+		// Hiding is for all other methods, based on reference type
+		// Math.pow() - static method
 	}
 
 }

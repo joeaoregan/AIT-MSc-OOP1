@@ -22,6 +22,7 @@ public class Book extends Product implements Printable {
 	}
 
 	// implement the Printable interface
+	@Override
 	public void print() {
 		System.out.println("Code:\t" + super.getCode());
 		System.out.println("Title:\t" + super.getDescription());

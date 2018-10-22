@@ -5,7 +5,7 @@
  * Male.java
  */
 
-package com.mase.casting;
+package com.mase.casting1;
 
 class Human {
 	//@override
